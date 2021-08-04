@@ -23,11 +23,7 @@
     </div>
     <div class="form-group">
       <label for="cpp">nominal rate value</label><br>
-      <select id="nir">
-        <option value="ipod">5%</option>
-        <option value="radio">10%</option>
-        <option value="computer">15%</option>
-        </select>
+      <input type="text" class="form-control" id="pl" placeholder="Enter nominal rate value" name="email">
     </div>
     <div class="form-group">
       <label for="compounding">compound period</label>
@@ -39,10 +35,23 @@
 <!---cit = compound interest -->
 <p id="ct"></p>
 <script>
-  document.getElementById("wt").addEventListener("click", ng)
+  
 function ng(){
-   document.getElementById("ct").innerHTML = "PULL"
+  function yio(x){
+    return x/100
 }
+  var nir = document.getElementById("pl").value
+  var pi = document.getElementById("pi").value
+  var cpp = document.getElementById("cpp").value
+  let cg,mg,fg,pg;
+  cg = 1 + yio(nir)
+  mg = cg ** cpp
+  fg = mg - 1
+  pg = pi * fg.toFixed(2)
+   document.getElementById("ct").innerHTML = pg
+}
+
+document.getElementById("wt").addEventListener("click", ng)
 </script>
 </body>
 </html>
