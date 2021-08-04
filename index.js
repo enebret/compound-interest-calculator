@@ -14,3 +14,7 @@
  pi = document.getElementById(pi)
  nir = document.getElementById(nir)
  cpp = document.getElementById(cpp)
+ cit = document.getElementById(cit)
+ function wt(){
+    return cit.write('name')
+ }
