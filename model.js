@@ -2,6 +2,7 @@ var p, i, n;
 p = 10000
 i = 5
 n = 1 //number of compounding periods
+z = 2
 
 function nio(x){
     return x/100
